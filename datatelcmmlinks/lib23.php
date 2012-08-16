@@ -1,5 +1,5 @@
 <?php
-// This file is part of the Datatel CMM Plugin
+// This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -14,6 +14,22 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-$plugin->version = 2012080702;
-$plugin->release = '1.1';
-$plugin->requires = 2010112400; 
+/**
+ * repository_datatelcmmlinks class
+ *
+ * @since 2.0
+ * @package    repository
+ * @subpackage datatelcmmlinks
+ * @copyright  2012 Ellucian, Inc
+ * @author     Ellucian, inc
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+class repository_datatelcmmlinks_abs extends repository
+{
+    public static function type_config_form($mform) {
+        parent::type_config_form($mform);
+        repository_datatelcmmlinks::type_config_form_23($mform);
+    }
+}
+
